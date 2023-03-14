@@ -18,8 +18,6 @@ import pageObjects.LoginPageElements;
 
 public class TestClass_003_InvalidLogin extends BaseTest{
 	
-	
-	
 	@Test
 	public void loginFail() {
 		BaseTest.driver.findElement(By.xpath(HomePageElements.username)).sendKeys("standard_user");
