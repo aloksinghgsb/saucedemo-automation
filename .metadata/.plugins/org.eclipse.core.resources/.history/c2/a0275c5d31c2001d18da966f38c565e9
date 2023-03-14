@@ -1,0 +1,16 @@
+package qa.tests;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import base.BaseTest;
+import pageObjects.LoginPageElements;
+
+public class TestClass_002 {
+	
+	@Test
+	public void loginSuccess() {
+		BaseTest.driver.findElement(By.xpath(LoginPageElements.username)).sendKeys("standard_user");
+	}
+	
+}

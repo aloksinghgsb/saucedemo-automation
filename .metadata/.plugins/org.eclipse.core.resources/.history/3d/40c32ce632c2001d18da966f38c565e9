@@ -1,0 +1,23 @@
+package qa.tests;
+
+import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import base.BaseTest;
+import pageObjects.LoginPageElements;
+
+public class TestClass_003 extends BaseTest{
+	
+	@Test
+	public void loginSuccess() {
+		BaseTest.driver.findElement(By.xpath(LoginPageElements.username)).sendKeys("standard_user");
+		BaseTest.driver.findElement(By.xpath(LoginPageElements.pwd)).sendKeys("secret_sauce1");
+		BaseTest.driver.findElement(By.xpath(LoginPageElements.loginbtn)).click();
+//		String successLoginHeadings=BaseTest.driver.findElement(By.xpath("//span[@class='title']")).getText();
+//		assertEquals(successLoginHeadings,"Products");
+	}
+
+	
+}

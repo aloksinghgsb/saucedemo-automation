@@ -1,0 +1,7 @@
+package qa.tests;
+
+public class TestClass_002 {
+	
+	@Test
+	
+}

@@ -1,0 +1,6 @@
+package pageObjects;
+
+public interface HomePageElements {
+	String homePageHeading="//div[@class='login_logo']";
+
+}

@@ -1,0 +1,21 @@
+package qa.tests;
+
+import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import base.BaseTest;
+import pageObjects.HomePageElements;
+
+public class TestCase_001 extends BaseTest {
+	
+	@Test(priority=0)
+	public void homePageLoadedSuccessfully() {
+		WebElement ele=BaseTest.driver.findElement(By.xpath(HomePageElements.homePageHeading));
+		String homepageHeading=ele.getText();
+		assertEquals(homepageHeading,"Swag Labs");
+	}
+
+}

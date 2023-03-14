@@ -1,0 +1,30 @@
+package base;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.Constants;
+
+public class BaseTest {
+	
+	public static WebDriver driver;
+	
+	@BeforeSuite
+	public static void setupDriver() {
+		driver= WebDriverManager.chromedriver().create();
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get(Constants.url);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		
+	}
+
+	@AfterSuite
+	public void closeBrowser() {
+		driver.close();
+	}
+}
