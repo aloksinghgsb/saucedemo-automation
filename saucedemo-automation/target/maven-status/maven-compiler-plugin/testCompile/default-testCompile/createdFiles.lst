@@ -1,0 +1,3 @@
+qa\tests\TestClass_003_InvalidLogin.class
+qa\tests\TestCase_001_HomePageLoadedSuccess.class
+qa\tests\TestClass_002_LoginSuccess.class

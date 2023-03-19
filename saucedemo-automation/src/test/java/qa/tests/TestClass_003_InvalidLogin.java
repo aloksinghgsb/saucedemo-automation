@@ -18,12 +18,11 @@ import pageObjects.LoginPageElements;
 
 public class TestClass_003_InvalidLogin extends BaseTest{
 	
-	@Test
+		@Test
 	public void loginFail() {
 		BaseTest.driver.findElement(By.xpath(HomePageElements.username)).sendKeys("standard_user");
 		BaseTest.driver.findElement(By.xpath(HomePageElements.pwd)).sendKeys("secret_sauce1");
 		BaseTest.driver.findElement(By.xpath(HomePageElements.loginbtn)).click();
-		WebDriverWait wait=new WebDriverWait(BaseTest.driver,Duration.ofSeconds(30));
 		WebElement invalidLoginmsg=BaseTest.driver.findElement(By.xpath(HomePageElements.invalidLoginMsg));
 		waitForVisible(invalidLoginmsg,20);
 		String invalidLoginmsgText=invalidLoginmsg.getText();

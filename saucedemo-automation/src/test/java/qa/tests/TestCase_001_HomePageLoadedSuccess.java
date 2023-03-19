@@ -1,11 +1,8 @@
 package qa.tests;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import static org.testng.Assert.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import base.BaseTest;

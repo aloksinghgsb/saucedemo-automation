@@ -1,4 +1,6 @@
 C:\Users\Amy\automation\saucedemo-automation\saucedemo-automation\src\main\java\pageObjects\HomePageElements.java
 C:\Users\Amy\automation\saucedemo-automation\saucedemo-automation\src\main\java\base\BaseTest.java
+C:\Users\Amy\automation\saucedemo-automation\saucedemo-automation\src\main\java\utils\WriteDataIntoExcel.java
+C:\Users\Amy\automation\saucedemo-automation\saucedemo-automation\src\main\java\utils\ReadDataFromExcel.java
 C:\Users\Amy\automation\saucedemo-automation\saucedemo-automation\src\main\java\utils\Constants.java
 C:\Users\Amy\automation\saucedemo-automation\saucedemo-automation\src\main\java\pageObjects\LoginPageElements.java
