@@ -1347,3 +1347,153 @@ Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\sa
 	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:323)
 	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1514)
 	... 12 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-03-22 14:27:10.497
+!MESSAGE An internal error occurred during: "Discard Changes".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Cannot lock C:\Users\Amy\automation\saucedemo-automation\.git\index. Ensure that no other process has an open file handle on the lock file C:\Users\Amy\automation\saucedemo-automation\.git\index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:307)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.discardChanges(DiscardChangesOperation.java:244)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.discardChanges(DiscardChangesOperation.java:199)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.access$0(DiscardChangesOperation.java:187)
+	at org.eclipse.egit.core.op.DiscardChangesOperation$1.run(DiscardChangesOperation.java:180)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.execute(DiscardChangesOperation.java:183)
+	at org.eclipse.egit.core.internal.job.JobUtil$2.runInWorkspace(JobUtil.java:107)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.LockFailedException: Cannot lock C:\Users\Amy\automation\saucedemo-automation\.git\index. Ensure that no other process has an open file handle on the lock file C:\Users\Amy\automation\saucedemo-automation\.git\index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1282)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:318)
+	at org.eclipse.jgit.api.CheckoutCommand.checkoutPaths(CheckoutCommand.java:414)
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:178)
+	... 10 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2023-03-22 14:27:14.966
+!MESSAGE An internal error occurred during: "Discard Changes".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Checkout conflict with file: .metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+	at org.eclipse.jgit.api.CheckoutCommand.checkoutPath(CheckoutCommand.java:528)
+	at org.eclipse.jgit.api.CheckoutCommand.access$3(CheckoutCommand.java:522)
+	at org.eclipse.jgit.api.CheckoutCommand$2.apply(CheckoutCommand.java:513)
+	at org.eclipse.jgit.dircache.DirCacheEditor.applyEdits(DirCacheEditor.java:164)
+	at org.eclipse.jgit.dircache.DirCacheEditor.finish(DirCacheEditor.java:99)
+	at org.eclipse.jgit.dircache.BaseDirCacheEditor.commit(BaseDirCacheEditor.java:243)
+	at org.eclipse.jgit.dircache.DirCacheEditor.commit(DirCacheEditor.java:92)
+	at org.eclipse.jgit.api.CheckoutCommand.checkoutPathsFromCommit(CheckoutCommand.java:519)
+	at org.eclipse.jgit.api.CheckoutCommand.checkoutPaths(CheckoutCommand.java:425)
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:178)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.discardChanges(DiscardChangesOperation.java:244)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.discardChanges(DiscardChangesOperation.java:199)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.access$0(DiscardChangesOperation.java:187)
+	at org.eclipse.egit.core.op.DiscardChangesOperation$1.run(DiscardChangesOperation.java:180)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.egit.core.op.DiscardChangesOperation.execute(DiscardChangesOperation.java:183)
+	at org.eclipse.egit.core.internal.job.JobUtil$2.runInWorkspace(JobUtil.java:107)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15327661369704306557.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1516)
+	at org.eclipse.jgit.api.CheckoutCommand.checkoutPath(CheckoutCommand.java:525)
+	... 19 more
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15327661369704306557.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:323)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1514)
+	... 20 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-03-22 14:27:19.871
+!MESSAGE Stash create error
+!STACK 1
+org.eclipse.team.core.TeamException: Exception caught during execution of reset command. Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log6476440887247656582.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.egit.core.op.StashCreateOperation.execute(StashCreateOperation.java:108)
+	at org.eclipse.egit.ui.internal.stash.StashCreateUI$1.runInWorkspace(StashCreateUI.java:82)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log6476440887247656582.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1516)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:563)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:467)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:414)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:182)
+	at org.eclipse.jgit.api.StashCreateCommand.call(StashCreateCommand.java:367)
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:97)
+	... 6 more
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log6476440887247656582.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:323)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1514)
+	... 12 more
+!SUBENTRY 1 org.eclipse.team.core 4 0 2023-03-22 14:27:19.871
+!MESSAGE Exception caught during execution of reset command. Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log6476440887247656582.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+!STACK 0
+java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log6476440887247656582.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1516)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:563)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:467)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:414)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:182)
+	at org.eclipse.jgit.api.StashCreateCommand.call(StashCreateCommand.java:367)
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.egit.core.op.StashCreateOperation.execute(StashCreateOperation.java:108)
+	at org.eclipse.egit.ui.internal.stash.StashCreateUI$1.runInWorkspace(StashCreateUI.java:82)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log6476440887247656582.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:323)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1514)
+	... 12 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-03-22 14:27:23.937
+!MESSAGE Stash create error
+!STACK 1
+org.eclipse.team.core.TeamException: Exception caught during execution of reset command. Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15070482079586606429.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.egit.core.op.StashCreateOperation.execute(StashCreateOperation.java:108)
+	at org.eclipse.egit.ui.internal.stash.StashCreateUI$1.runInWorkspace(StashCreateUI.java:82)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15070482079586606429.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1516)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:563)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:467)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:414)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:182)
+	at org.eclipse.jgit.api.StashCreateCommand.call(StashCreateCommand.java:367)
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:97)
+	... 6 more
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15070482079586606429.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:323)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1514)
+	... 12 more
+!SUBENTRY 1 org.eclipse.team.core 4 0 2023-03-22 14:27:23.937
+!MESSAGE Exception caught during execution of reset command. Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15070482079586606429.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+!STACK 0
+java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15070482079586606429.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1516)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:563)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:467)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:414)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:182)
+	at org.eclipse.jgit.api.StashCreateCommand.call(StashCreateCommand.java:367)
+	at org.eclipse.egit.core.op.StashCreateOperation$1.run(StashCreateOperation.java:97)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.egit.core.op.StashCreateOperation.execute(StashCreateOperation.java:108)
+	at org.eclipse.egit.ui.internal.stash.StashCreateUI$1.runInWorkspace(StashCreateUI.java:82)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not rename file C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log15070482079586606429.tmp to C:\Users\Amy\automation\saucedemo-automation\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.util.FileUtils.rename(FileUtils.java:323)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1514)
+	... 12 more
